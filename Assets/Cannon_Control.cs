@@ -1,0 +1,69 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Cannon_Control : MonoBehaviour {
+
+	//maximum amount of cannon rotation
+	public float MAX_DOWN_ANGLE = 10f;
+	public float MAX_UP_ANGLE = 20f;
+	public float MAX_LEFT_ANGLE = 50f;
+	public float MAX_RIGHT_ANGLE = 50f;
+
+	//cannon rotation speed
+	public float LEFT_RIGHT_ROTATION_SPEED = 5.0f;
+	public float UP_DOWN_ROTATION_SPEED = 1.0f;
+
+	//markers for how much rotation has occured
+	public float downRotation;
+	public float upRotation;
+	public float leftRotation;
+	public float rightRotation;
+
+	//starting location randomization
+	public float X_STARTING_POSITION = 0f;
+	public float MAX_X_STARTING_DISPLACEMENT = 15f;
+	public float Z_STARTING_POSITION = 10f;
+	public float MAX_Z_STARTING_DISPLACEMENT = 10f;
+
+	// Use this for initialization
+	void Start () {
+		//initialize rotation values
+		downRotation = 0f;
+		upRotation = 0f;
+		leftRotation = 0f;
+		rightRotation = 0f;
+
+		//initialize random start location on x/z axis
+		float randomXDisplacement = Random.Range(-MAX_X_STARTING_DISPLACEMENT, MAX_X_STARTING_DISPLACEMENT);
+		float randomZDisplacement = Random.Range(-MAX_Z_STARTING_DISPLACEMENT, MAX_Z_STARTING_DISPLACEMENT);
+		transform.Translate (randomXDisplacement, randomZDisplacement, 0);
+	}
+
+	// Update is called once per frame
+	void Update () {
+		//right rotation
+		if (Input.GetKey (KeyCode.D) && rightRotation < MAX_RIGHT_ANGLE) {
+			transform.Rotate (0, 0, 1 * LEFT_RIGHT_ROTATION_SPEED);
+			rightRotation += LEFT_RIGHT_ROTATION_SPEED;
+			leftRotation -= LEFT_RIGHT_ROTATION_SPEED;
+		}
+		//left rotation
+		if (Input.GetKey (KeyCode.A) && leftRotation < MAX_LEFT_ANGLE) {
+			transform.Rotate (0, 0, -1 * LEFT_RIGHT_ROTATION_SPEED);
+			leftRotation += LEFT_RIGHT_ROTATION_SPEED;
+			rightRotation -= LEFT_RIGHT_ROTATION_SPEED;
+		}
+		//down rotation
+		if (Input.GetKey (KeyCode.S) && downRotation < MAX_DOWN_ANGLE) {
+			transform.Rotate (1 * UP_DOWN_ROTATION_SPEED, 0, 0);
+			downRotation += UP_DOWN_ROTATION_SPEED;
+			upRotation -= UP_DOWN_ROTATION_SPEED;
+		}
+		//up rotation
+		if (Input.GetKey (KeyCode.W) && upRotation < MAX_UP_ANGLE) {
+			transform.Rotate (-1 * UP_DOWN_ROTATION_SPEED, 0, 0);
+			upRotation += UP_DOWN_ROTATION_SPEED;
+			downRotation -= UP_DOWN_ROTATION_SPEED;
+		}
+	}
+}
