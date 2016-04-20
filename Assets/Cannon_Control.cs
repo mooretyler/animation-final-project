@@ -10,7 +10,7 @@ public class Cannon_Control : MonoBehaviour {
 	public float MAX_RIGHT_ANGLE = 50f;
 
 	//cannon rotation speed
-	public float LEFT_RIGHT_ROTATION_SPEED = 5.0f;
+	public float LEFT_RIGHT_ROTATION_SPEED = 1.0f;
 	public float UP_DOWN_ROTATION_SPEED = 1.0f;
 
 	//markers for how much rotation has occured
@@ -19,12 +19,6 @@ public class Cannon_Control : MonoBehaviour {
 	public float leftRotation;
 	public float rightRotation;
 
-	//starting location randomization
-	public float X_STARTING_POSITION = 0f;
-	public float MAX_X_STARTING_DISPLACEMENT = 15f;
-	public float Z_STARTING_POSITION = 10f;
-	public float MAX_Z_STARTING_DISPLACEMENT = 10f;
-
 	// Use this for initialization
 	void Start () {
 		//initialize rotation values
@@ -32,11 +26,6 @@ public class Cannon_Control : MonoBehaviour {
 		upRotation = 0f;
 		leftRotation = 0f;
 		rightRotation = 0f;
-
-		//initialize random start location on x/z axis
-		float randomXDisplacement = Random.Range(-MAX_X_STARTING_DISPLACEMENT, MAX_X_STARTING_DISPLACEMENT);
-		float randomZDisplacement = Random.Range(-MAX_Z_STARTING_DISPLACEMENT, MAX_Z_STARTING_DISPLACEMENT);
-		transform.Translate (randomXDisplacement, randomZDisplacement, 0);
 	}
 
 	// Update is called once per frame
