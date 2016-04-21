@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Cannon1_Controls : MonoBehaviour {
 
@@ -44,5 +45,7 @@ public class Cannon1_Controls : MonoBehaviour {
 			}
 		}
 
+		if (Player1_Control.isActive)
+			GlobalVariables.UP_DOWN_ANGLE = "Up/Down Angle: " + upRotation;
 	}
 }

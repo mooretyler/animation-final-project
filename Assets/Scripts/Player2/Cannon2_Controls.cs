@@ -44,5 +44,7 @@ public class Cannon2_Controls : MonoBehaviour {
 			}
 		}
 
+		if (Player2_Control.isActive)
+			GlobalVariables.UP_DOWN_ANGLE = "Up/Down Angle: " + upRotation;
 	}
 }

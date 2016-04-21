@@ -33,5 +33,7 @@ public class Player2_Control : MonoBehaviour {
 			}
 		}
 
+		if (Player2_Control.isActive)
+			GlobalVariables.LEFT_RIGHT_ANGLE = "Left/Right Angle: " + rightRotation;
 	}
 }
