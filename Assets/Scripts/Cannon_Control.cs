@@ -40,5 +40,6 @@ public class Cannon_Control : MonoBehaviour {
 			upRotation += UP_DOWN_ROTATION_SPEED;
 			downRotation -= UP_DOWN_ROTATION_SPEED;
 		}
+			
 	}
 }
