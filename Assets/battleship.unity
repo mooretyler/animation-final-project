@@ -209,7 +209,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 233764618}
   - 114: {fileID: 233764619}
-  - 114: {fileID: 233764620}
   m_Layer: 0
   m_Name: LaunchC2
   m_TagString: Untagged
@@ -242,19 +241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   ball: {fileID: 173482, guid: 17763a093872345a1b488f766f9828a6, type: 2}
---- !u!114 &233764620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 233764617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c85e3907eb38411ebeec371a7b25e9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  ball: {fileID: 0}
 --- !u!1 &270731729 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 948d1f7f848ffa644acdc4c95ad7cf8d, type: 3}
@@ -700,6 +686,81 @@ MonoBehaviour:
   LEFT_RIGHT_ROTATION_SPEED: 1
   leftRotation: 0
   rightRotation: 0
+--- !u!1 &739860508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 739860512}
+  - 33: {fileID: 739860511}
+  - 64: {fileID: 739860510}
+  - 23: {fileID: 739860509}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &739860509
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739860508}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &739860510
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739860508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &739860511
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739860508}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &739860512
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 739860508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalScale: {x: 50, y: 1, z: 50}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &764337468 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: a5c65e03c519a9c43bc4e7fe9d43d47c, type: 3}
@@ -1241,6 +1302,7 @@ GameObject:
   - 33: {fileID: 1732397653}
   - 64: {fileID: 1732397652}
   - 23: {fileID: 1732397651}
+  - 114: {fileID: 1732397655}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1281,10 +1343,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1732397650}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1732397653
 MeshFilter:
@@ -1305,6 +1367,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1732397655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1732397650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1014df610243642bfb0cc8f7be685169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1796410775
 GameObject:
   m_ObjectHideFlags: 0

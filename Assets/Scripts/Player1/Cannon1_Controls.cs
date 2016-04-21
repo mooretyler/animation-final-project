@@ -29,7 +29,6 @@ public class Cannon1_Controls : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		print (Player1_Control.isActive);
 		if (Player1_Control.isActive) {
 			//down rotation
 			if (Input.GetKey (KeyCode.S) && downRotation < MAX_DOWN_ANGLE) {

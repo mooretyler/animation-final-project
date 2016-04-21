@@ -32,8 +32,6 @@ public class FireCannon2 : MonoBehaviour {
 				Rigidbody ballDynamics = cannonBall.GetComponent<Rigidbody> ();
 				ballDynamics.AddForce (transform.forward * speed);
 				speed = 100.0f;
-				Player1_Control.isActive = true;
-				Player2_Control.isActive = false;
 			}
 		}
 	}
