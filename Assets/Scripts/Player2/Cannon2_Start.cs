@@ -4,7 +4,7 @@ using System.Collections;
 public class Cannon2_Start : MonoBehaviour {
 
 	//starting location randomization
-	public float MAX_X_STARTING_DISPLACEMENT = 15f;
+	public float MAX_X_STARTING_DISPLACEMENT = 35f;
 	public float MAX_Z_STARTING_DISPLACEMENT = 10f;
 
 	// Use this for initialization
