@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c85e3907eb38411ebeec371a7b25e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 500
   ball: {fileID: 173482, guid: 17763a093872345a1b488f766f9828a6, type: 2}
 --- !u!1 &270731729 stripped
 GameObject:
@@ -1328,6 +1328,7 @@ GameObject:
   - 224: {fileID: 1104036627}
   - 222: {fileID: 1104036629}
   - 114: {fileID: 1104036628}
+  - 114: {fileID: 1104036630}
   m_Layer: 5
   m_Name: PowerControlText
   m_TagString: Untagged
@@ -1391,6 +1392,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1104036626}
+--- !u!114 &1104036630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104036626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c25871aa9ba4d50aada5150451f7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1109004534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,7 +2285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661e9892532ae4be78c91cc632650103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 500
   ball: {fileID: 170998, guid: 88ec0ecece5404db7bd13587ed7d08b8, type: 2}
 --- !u!1 &1696609382
 GameObject:
