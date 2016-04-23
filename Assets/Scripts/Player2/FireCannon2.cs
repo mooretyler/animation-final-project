@@ -10,19 +10,21 @@ public class FireCannon2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		speed = 100.0f;
+		speed = GlobalVariables.MIN_FIRING_SPEED;
 		interval = 1.015f;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (Player2_Control.isActive) {
+			GlobalVariables.WHO_HAS_CONTROL_TEXT = "Player 1";
+
 			if (Input.GetKey (KeyCode.Space)) {
 				speed *= interval;
-				if (speed > 10000.0f) {
+				if (speed > GlobalVariables.MAX_FIRING_SPEED) {
 					interval = 0.995f;
 				}
-				if (speed < 100.0f) {
+				if (speed < GlobalVariables.MIN_FIRING_SPEED) {
 					interval = 1.015f;
 				}
 				print (speed);
@@ -31,10 +33,11 @@ public class FireCannon2 : MonoBehaviour {
 				cannonBall = (GameObject)Instantiate (ball, transform.position, transform.rotation);
 				Rigidbody ballDynamics = cannonBall.GetComponent<Rigidbody> ();
 				ballDynamics.AddForce (transform.forward * speed);
-				speed = 100.0f;
+				speed = GlobalVariables.MIN_FIRING_SPEED;
+				interval = 1.015f;
 			}
+			GlobalVariables.POWER_LEVEL = speed;
 		}
-		GlobalVariables.POWER_LEVEL = speed;
 	}
 
 	///
