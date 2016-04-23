@@ -7,11 +7,7 @@ public class FireCannon2 : MonoBehaviour {
 	public float speed;
 	private float interval;
 	public GameObject ball;
-<<<<<<< HEAD
 	private bool maxReached;
-=======
-
->>>>>>> master
 	// Use this for initialization
 	void Start () {
 		speed = 100.0f;
