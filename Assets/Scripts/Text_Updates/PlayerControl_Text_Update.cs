@@ -15,7 +15,7 @@ public class PlayerControl_Text_Update : MonoBehaviour {
 	void Update () {
 		if (Player1_Control.isActive)
 			PlayerControlAngleText.text = "Control: Player 1";
-		else
+		if (Player2_Control.isActive)
 			PlayerControlAngleText.text = "Control: Player 2";
 	}
 }
