@@ -7,30 +7,30 @@ public class FireCannon2 : MonoBehaviour {
 	public float speed;
 	private float interval;
 	public GameObject ball;
-	private bool maxReached;
 	// Use this for initialization
 	void Start () {
-		speed = 100.0f;
+		speed = GlobalVariables.MIN_FIRING_SPEED;
 		interval = 1.015f;
-		maxReached = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (Player2_Control.isActive) {
-			if (Input.GetKey (KeyCode.Space) && !maxReached) {
+			if (Input.GetKey (KeyCode.Space)) {
 				speed *= interval;
-				if (speed > 10000.0f) {
-					maxReached = true;
+				if (speed > GlobalVariables.MAX_FIRING_SPEED) {
+					interval = 0.995f;
+				}
+				if (speed < GlobalVariables.MIN_FIRING_SPEED) {
+					interval = 1.015f;
 				}
 				print (speed);
 			}
-			if (Input.GetKeyUp (KeyCode.Space) || maxReached) {
+			if (Input.GetKeyUp (KeyCode.Space)) {
 				cannonBall = (GameObject)Instantiate (ball, transform.position, transform.rotation);
 				Rigidbody ballDynamics = cannonBall.GetComponent<Rigidbody> ();
 				ballDynamics.AddForce (transform.forward * speed);
-				speed = 100.0f;
-				maxReached = false;
+				speed = GlobalVariables.MIN_FIRING_SPEED;
 			}
 		}
 		GlobalVariables.POWER_LEVEL = speed;
