@@ -19,11 +19,13 @@ public class Cannon1_Controls : MonoBehaviour {
 
 
 
+
 	// Use this for initialization
 	void Start () {
 		//initialize rotation values
 		downRotation = 0f;
 		upRotation = 0f;
+
 
 	}
 

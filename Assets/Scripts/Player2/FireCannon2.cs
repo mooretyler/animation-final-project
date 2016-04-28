@@ -7,7 +7,6 @@ public class FireCannon2 : MonoBehaviour {
 	public float speed;
 	private float interval;
 	public GameObject ball;
-
 	// Use this for initialization
 	void Start () {
 		speed = GlobalVariables.MIN_FIRING_SPEED;
