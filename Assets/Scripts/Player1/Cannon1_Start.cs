@@ -15,6 +15,7 @@ public class Cannon1_Start : MonoBehaviour {
 		float randomZDisplacement = Random.Range(-MAX_Z_STARTING_DISPLACEMENT, MAX_Z_STARTING_DISPLACEMENT);
 		transform.Translate (randomXDisplacement, randomZDisplacement, 0);
 		isActive = true;
+		FiringControl.player1Scripts (isActive);
 	}
 	
 	// Update is called once per frame
