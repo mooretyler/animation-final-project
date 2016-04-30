@@ -11,7 +11,7 @@ public class WallGenerator : MonoBehaviour {
 		//create middle wall bottom layer
 		float wall_length = 50;
 		float current_length = -wall_length;
-		float wall_height = 20;
+		float wall_height = 10;
 		float current_height = 0;
 		float wall_z = 45;
 		float current_z = -45;
