@@ -19,7 +19,6 @@ public class FireCannon1 : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Player1_Control.isActive) {
 			GlobalVariables.WHO_HAS_CONTROL_TEXT = "Player 1";
 
 			if (Input.GetKey (KeyCode.Space)) {
@@ -41,7 +40,6 @@ public class FireCannon1 : MonoBehaviour {
 
 			}
 			GlobalVariables.POWER_LEVEL = speed;
-		}
 	}
 
 	///
