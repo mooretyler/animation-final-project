@@ -7,6 +7,7 @@ public class FireCannon1 : MonoBehaviour {
 	public float speed;
 	private float interval;
 	public GameObject ball;
+	public GameObject smoke;
 	//private GameObject p1Camera;
 
 
@@ -37,7 +38,7 @@ public class FireCannon1 : MonoBehaviour {
 				ballDynamics.AddForce (transform.forward * speed);
 				speed = GlobalVariables.MIN_FIRING_SPEED;
 				interval = 1.015f;
-
+				Instantiate (smoke, transform.position, transform.rotation);
 			}
 			GlobalVariables.POWER_LEVEL = speed;
 	}

@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4a808ddf0d343fa9d2beb3239c55a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   MAX_X_STARTING_DISPLACEMENT: 35
   MAX_Z_STARTING_DISPLACEMENT: 10
 --- !u!65 &126901875
@@ -311,6 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   ball: {fileID: 173482, guid: 17763a093872345a1b488f766f9828a6, type: 2}
+  smoke: {fileID: 130658, guid: 32b87e1efd84d49c5abd44dbdb846371, type: 2}
 --- !u!1 &270731729 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 948d1f7f848ffa644acdc4c95ad7cf8d, type: 3}
@@ -326,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1612bc995c5b84b4dbb83633a4a1468a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   MAX_X_STARTING_DISPLACEMENT: 35
   MAX_Z_STARTING_DISPLACEMENT: 10
 --- !u!65 &270731731
@@ -399,6 +402,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a5c65e03c519a9c43bc4e7fe9d43d47c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6402a620c7ca244ccae4a5895347364a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5c65e03c519a9c43bc4e7fe9d43d47c, type: 3}
   m_IsPrefabParent: 0
@@ -739,7 +746,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1b5644d19be0a467795dc92fb6ea1510, type: 2}
+  - {fileID: 2100000, guid: 3ea10349250d445359342b6c1ec3096d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1368,6 +1375,10 @@ Prefab:
       propertyPath: m_Name
       value: Cannon1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a5c65e03c519a9c43bc4e7fe9d43d47c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37e8c100027db448b8c06a7f6613612b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5c65e03c519a9c43bc4e7fe9d43d47c, type: 3}
   m_IsPrefabParent: 0
@@ -1657,6 +1668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   ball: {fileID: 170998, guid: 88ec0ecece5404db7bd13587ed7d08b8, type: 2}
+  smoke: {fileID: 130658, guid: 32b87e1efd84d49c5abd44dbdb846371, type: 2}
 --- !u!1 &1732397650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1698,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1b5644d19be0a467795dc92fb6ea1510, type: 2}
+  - {fileID: 2100000, guid: 3ea10349250d445359342b6c1ec3096d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
