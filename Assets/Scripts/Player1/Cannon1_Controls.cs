@@ -31,7 +31,6 @@ public class Cannon1_Controls : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Player1_Control.isActive) {
 			//down rotation
 			if (Input.GetKey (KeyCode.S) && downRotation < MAX_DOWN_ANGLE) {
 				transform.Rotate (1 * UP_DOWN_ROTATION_SPEED, 0, 0);
@@ -44,9 +43,10 @@ public class Cannon1_Controls : MonoBehaviour {
 				upRotation += UP_DOWN_ROTATION_SPEED;
 				downRotation -= UP_DOWN_ROTATION_SPEED;
 			}
-		}
 
-		if (Player1_Control.isActive)
+
+	
 			GlobalVariables.UP_DOWN_ANGLE = "Up/Down Angle: " + upRotation;
+	
 	}
 }

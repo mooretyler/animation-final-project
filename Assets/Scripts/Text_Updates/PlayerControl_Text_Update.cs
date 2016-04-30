@@ -13,9 +13,9 @@ public class PlayerControl_Text_Update : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Player1_Control.isActive)
+		if (Cannon1_Start.isActive)
 			PlayerControlAngleText.text = "Control: Player 1";
-		if (Player2_Control.isActive)
+		if (Cannon2_Start.isActive)
 			PlayerControlAngleText.text = "Control: Player 2";
 	}
 }

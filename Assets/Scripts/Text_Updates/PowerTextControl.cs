@@ -14,7 +14,7 @@ public class PowerTextControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		int numOfXs = (int)((GlobalVariables.POWER_LEVEL / GlobalVariables.MAX_FIRING_SPEED) * 10);
+		int numOfXs = (int)(((GlobalVariables.POWER_LEVEL - GlobalVariables.MIN_FIRING_SPEED) / (GlobalVariables.MAX_FIRING_SPEED - GlobalVariables.MIN_FIRING_SPEED)) * 10);
 		StringBuilder powerDisplay = new StringBuilder("          ");
 		for (int i = 0; i < numOfXs; i++)
 			powerDisplay.Replace(' ', 'x', i, 1);
