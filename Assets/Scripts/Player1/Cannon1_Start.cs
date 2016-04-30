@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Cannon1_Start : MonoBehaviour {
 
+	public GameObject explosion;
+
 	//starting location randomization
 	public float MAX_X_STARTING_DISPLACEMENT = 35f;
 	public float MAX_Z_STARTING_DISPLACEMENT = 10f;
@@ -28,6 +30,9 @@ public class Cannon1_Start : MonoBehaviour {
 			p2Camera.GetComponent<UnityEngine.Camera> ().enabled = !Player2_Control.isActive;
 			Destroy (cannonball.gameObject);
 			print ("Player 2 Wins!");
+//			GameObject cannon = GameObject.Find ("Cannon1");
+//			Destroy (cannon);
+			Instantiate(explosion, transform.position, transform.rotation);
 		}
 
 	}

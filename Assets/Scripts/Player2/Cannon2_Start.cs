@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Cannon2_Start : MonoBehaviour {
 
+	public GameObject explosion;
+
 	//starting location randomization
 	public float MAX_X_STARTING_DISPLACEMENT = 35f;
 	public float MAX_Z_STARTING_DISPLACEMENT = 10f;
@@ -19,6 +21,7 @@ public class Cannon2_Start : MonoBehaviour {
 	void Update () {
 	
 	}
+
 	void OnTriggerEnter (Collider cannonball){
 		if (cannonball.gameObject.name == "CannonBall(Clone)") {
 			GameObject p1Camera = GameObject.Find ("P1Camera");
@@ -28,6 +31,9 @@ public class Cannon2_Start : MonoBehaviour {
 			//cannonball.GetComponent<UnityEngine.Camera> ().enabled = Player1_Control.isActive;
 			Destroy (cannonball.gameObject);
 			print ("Player 1 Wins!");
+//			GameObject cannon = GameObject.Find ("Cannon2");
+//			Destroy (cannon);
+			Instantiate (explosion, transform.position, transform.rotation);
 		}
 	}
 }
