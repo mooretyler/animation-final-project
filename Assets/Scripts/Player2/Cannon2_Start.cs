@@ -36,6 +36,7 @@ public class Cannon2_Start : MonoBehaviour {
 //			GameObject cannon = GameObject.Find ("Cannon2");
 //			Destroy (cannon);
 			Instantiate (explosion, transform.position, transform.rotation);
+			transform.GetComponent<AudioSource> ().Play ();
 		}
 	}
 }

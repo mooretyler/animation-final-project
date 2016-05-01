@@ -62,7 +62,7 @@ public class FireCannon1 : MonoBehaviour {
 		}
 		GlobalVariables.POWER_LEVEL = speed;
 
-		if (cannonBallHandler != null && Vector3.Distance(cannonBallHandler.transform.position, transform.position) > 5 && cannonBallHandler.GetComponent<Rigidbody>().velocity.magnitude < 15 && !cannonBallExploded) {
+		if (cannonBallHandler != null && Vector3.Distance(cannonBallHandler.transform.position, transform.position) > 5 && cannonBallHandler.GetComponent<Rigidbody>().velocity.magnitude < 20 && !cannonBallExploded) {
 			medium_explosion_handler = (GameObject)Instantiate (medium_explosion, cannonBallHandler.transform.position, cannonBallHandler.transform.rotation);
 			cannonBallExploded = true;
 			audio [1].Play ();
