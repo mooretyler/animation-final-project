@@ -19,9 +19,9 @@ public class WallGenerator : MonoBehaviour {
 		while (current_length < wall_length && current_height < wall_height && current_z <= wall_z) {
 			Vector3 location = new Vector3 ((float)current_length, (float)current_height, (float)current_z);
 			build_wall (location);
-			current_length = wall_block_builder.transform.position.x + 6;
+			current_length = wall_block_builder.transform.position.x + 3;
 			if (current_length >= wall_length) {
-				current_height = wall_block_builder.transform.position.y + 8f;
+				current_height = wall_block_builder.transform.position.y + 3f;
 				current_length = -wall_length;
 				if (current_height >= wall_height) {
 					current_z += 45;

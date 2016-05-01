@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - explosion-medium
+  - explosion-small
+  - smoke-effects
   layers:
   - Default
   - TransparentFX

@@ -313,6 +313,8 @@ MonoBehaviour:
   speed: 500
   ball: {fileID: 173482, guid: 17763a093872345a1b488f766f9828a6, type: 2}
   smoke: {fileID: 130658, guid: 32b87e1efd84d49c5abd44dbdb846371, type: 2}
+  mini_explosion: {fileID: 110778, guid: ee648153a7a884409bcfc0b1332481c4, type: 2}
+  medium_explosion: {fileID: 174780, guid: 65ecfb8fe8c7e4e4a8b874a9d75e1fe5, type: 2}
 --- !u!1 &270731729 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 948d1f7f848ffa644acdc4c95ad7cf8d, type: 3}
@@ -1614,6 +1616,8 @@ MonoBehaviour:
   speed: 500
   ball: {fileID: 170998, guid: 88ec0ecece5404db7bd13587ed7d08b8, type: 2}
   smoke: {fileID: 130658, guid: 32b87e1efd84d49c5abd44dbdb846371, type: 2}
+  mini_explosion: {fileID: 110778, guid: ee648153a7a884409bcfc0b1332481c4, type: 2}
+  medium_explosion: {fileID: 174780, guid: 65ecfb8fe8c7e4e4a8b874a9d75e1fe5, type: 2}
 --- !u!1 &1732397650
 GameObject:
   m_ObjectHideFlags: 0
