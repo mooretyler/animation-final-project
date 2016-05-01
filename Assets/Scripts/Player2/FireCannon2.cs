@@ -14,6 +14,8 @@ public class FireCannon2 : MonoBehaviour {
 	public GameObject mini_explosion;
 	public GameObject medium_explosion;
 
+	public AudioSource[] audio;
+
 	private bool cannonBallExploded = false;
 
 	// Use this for initialization
@@ -44,12 +46,15 @@ public class FireCannon2 : MonoBehaviour {
 			mini_explosion_handler = (GameObject)Instantiate (mini_explosion, transform.position, transform.rotation);
 			smoke_handler = (GameObject)Instantiate (smoke, transform.position, transform.rotation);
 			cannonBallExploded = false;
+			audio = transform.GetComponents<AudioSource> ();
+			audio [0].Play ();
 		}
 		GlobalVariables.POWER_LEVEL = speed;
 
 		if (cannonBallHandler != null && Vector3.Distance(cannonBallHandler.transform.position, transform.position) > 5 && cannonBallHandler.GetComponent<Rigidbody>().velocity.magnitude < 15 && !cannonBallExploded) {
 			medium_explosion_handler = (GameObject)Instantiate (medium_explosion, cannonBallHandler.transform.position, cannonBallHandler.transform.rotation);
 			cannonBallExploded = true;
+			audio [1].Play ();
 			Floor.RemoveCannonBall (cannonBallHandler, mini_explosion_handler);
 			//cannonBallHandler.GetComponent<AssociatedThingsToDestroy> ().addThings (medium_explosion_handler);
 		}
