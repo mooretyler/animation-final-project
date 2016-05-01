@@ -22,7 +22,8 @@ public class PlayAgainButton : MonoBehaviour {
 	}
 
 	public void onPlayAgain(){
-		this.transform.localScale = new Vector3 (0, 0, 0);
+		GlobalVariables.hasWINNER = false;
+		GlobalVariables.WINNER = 0;
 		SceneManager.LoadScene ("battleship");
 	}
 }

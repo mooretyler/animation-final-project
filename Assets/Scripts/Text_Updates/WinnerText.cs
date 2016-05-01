@@ -15,7 +15,8 @@ public class WinnerText : MonoBehaviour {
 		if (GlobalVariables.hasWINNER) {
 			if (GlobalVariables.WINNER == 1) {
 				winnerText.text = "Player 1 Wins!";
-			} else {
+			}
+			if (GlobalVariables.WINNER == 2){
 				winnerText.text = "Player 2 Wins!";
 			}
 			this.transform.localScale = new Vector3 (1, 1, 1);
