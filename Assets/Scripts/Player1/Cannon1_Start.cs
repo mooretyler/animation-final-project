@@ -19,7 +19,7 @@ public class Cannon1_Start : MonoBehaviour {
 		isActive = true;
 		FiringControl.player1Scripts (isActive);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -32,11 +32,12 @@ public class Cannon1_Start : MonoBehaviour {
 			p1Camera.GetComponent<UnityEngine.Camera> ().enabled = !Cannon1_Start.isActive;
 			p2Camera.GetComponent<UnityEngine.Camera> ().enabled = !Cannon2_Start.isActive;
 			Destroy (cannonball.gameObject);
-			print ("Player 2 Wins!");
-//			GameObject cannon = GameObject.Find ("Cannon1");
-//			Destroy (cannon);
 			Instantiate(explosion, transform.position, transform.rotation);
 			transform.GetComponent<AudioSource> ().Play ();
+			FiringControl.player1Scripts (false);
+			FiringControl.player2Scripts (false);
+			GlobalVariables.WINNER = 2;
+			GlobalVariables.hasWINNER = true;
 		}
 
 	}

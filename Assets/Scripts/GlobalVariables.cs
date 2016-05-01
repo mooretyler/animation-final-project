@@ -11,4 +11,6 @@ public static class GlobalVariables {
 	public static float FIRING_VELOCITY_CHANGE = 50f;
 
 	public static int FIRING_SEC_TIME_DELAY = 3;
+	public static int WINNER = 0;
+	public static bool hasWINNER = false;
 }

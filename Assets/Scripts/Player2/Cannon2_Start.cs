@@ -30,13 +30,13 @@ public class Cannon2_Start : MonoBehaviour {
 			GameObject p2Camera = GameObject.Find ("P2Camera");
 			p1Camera.GetComponent<UnityEngine.Camera> ().enabled = !Cannon1_Start.isActive;
 			p2Camera.GetComponent<UnityEngine.Camera> ().enabled = !Cannon2_Start.isActive;
-			//cannonball.GetComponent<UnityEngine.Camera> ().enabled = Player1_Control.isActive;
+			FiringControl.player1Scripts (false);
+			FiringControl.player2Scripts (false);
 			Destroy (cannonball.gameObject);
-			print ("Player 1 Wins!");
-//			GameObject cannon = GameObject.Find ("Cannon2");
-//			Destroy (cannon);
 			Instantiate (explosion, transform.position, transform.rotation);
 			transform.GetComponent<AudioSource> ().Play ();
+			GlobalVariables.WINNER = 1;
+			GlobalVariables.hasWINNER = true;
 		}
 	}
 }
